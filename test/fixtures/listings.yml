@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fabric: MyString
+  color: MyString
+  pattern: MyString
+  length: 1.5
+  width: 1.5
+
+two:
+  fabric: MyString
+  color: MyString
+  pattern: MyString
+  length: 1.5
+  width: 1.5
