@@ -1,0 +1,28 @@
+%h1= pluralize(@fabrics.count, "Fabrics")
+
+- @fabrics.each do |fabric|
+  %article
+    %header
+      %h2
+        = link_to(fabric.name, fabric)
+    %p
+      %header
+        Description:
+      = truncate(fabric.description, length: 25, separator: " ")
+    %p
+      %header
+        Treated:
+        = treated_show_method(fabric)
+    %table
+      %tr
+        %th Width:
+        %td= "#{fabric.width} inches wide"
+      %tr
+        %th Length
+        %td= "#{fabric.length} inches long"
+      %tr
+        %th Price
+        %td= number_to_currency(fabric.price)
+      %tr
+        %th Time on site:
+        %td= time_ago_in_words(fabric.offered_on)

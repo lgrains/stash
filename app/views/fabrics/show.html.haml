@@ -1,0 +1,27 @@
+%article
+  %header
+    %h2
+      = @fabric.name
+  %p
+    %header
+      Description:
+    = @fabric.description
+  %p
+    %header
+      Treated:
+      = treated_show_method(@fabric)
+  %table
+    %tr
+      %th Width:
+      %td= "#{@fabric.width} inches wide"
+    %tr
+      %th Length
+      %td= "#{@fabric.length} inches long"
+    %tr
+      %th Price
+      %td= number_to_currency(@fabric.price)
+    %tr
+      %th Time on site:
+      %td= time_ago_in_words(@fabric.offered_on)
+
+%h3= link_to("See All fabrics", root_path)
