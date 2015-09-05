@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828235017) do
+ActiveRecord::Schema.define(version: 20150904131759) do
 
-  create_table "listings", force: :cascade do |t|
-    t.string   "fabric"
+  create_table "fabrics", force: :cascade do |t|
+    t.string   "fabric_type"
     t.string   "color"
     t.string   "pattern"
     t.float    "length"
