@@ -24,4 +24,8 @@
       %th Time on site:
       %td= time_ago_in_words(@fabric.offered_on)
 
-%h3= link_to("See All fabrics", root_path)
+%nav
+  = link_to("See All Fabrics", root_path)
+  |
+  = link_to("Edit", edit_fabric_path(@fabric))
+
