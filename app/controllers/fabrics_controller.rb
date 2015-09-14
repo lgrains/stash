@@ -13,8 +13,23 @@ class FabricsController < ApplicationController
 
   def update
     @fabric = Fabric.find(params[:id])
-    fabric_params = params.require(:fabric).permit(:fabric_type, :color, :pattern, :length, :width, :price, :description)
     @fabric.update(fabric_params)
     redirect_to @fabric
+  end
+
+  def new
+    @fabric = Fabric.new
+  end
+
+  def create
+    @fabric = Fabric.new(fabric_params)
+    @fabric.save!
+    redirect_to @fabric
+  end
+
+  private
+
+  def fabric_params
+    params.require(:fabric).permit(:fabric_type, :color, :pattern, :length, :width, :price, :description, :offered_on)
   end
 end
