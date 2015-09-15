@@ -37,5 +37,6 @@ group :test do
   gem "shoulda-matchers"
   gem "capybara", ">=2.2.0"
   gem "simplecov", :require => false
+  gem "timecop"
 end
 

@@ -1,5 +1,7 @@
 %h1= pluralize(@fabrics.count, "Fabrics")
 
+= link_to("Add new fabric", new_fabric_path)
+
 - @fabrics.each do |fabric|
   %article
     %header
