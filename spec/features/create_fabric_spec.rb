@@ -14,15 +14,16 @@ describe "Creating a new fabric" do
     fill_in "Width", with: 18.0
     fill_in "Price", with: 3.5
     fill_in "Description", with: "Bricks fabric perfect for creating a house or walkway"
-    # you'll need to use 'fill_in' rather than 'select'
-    fill_in "Offered on", with: (Time.now - 1.week).to_s
+    select "August", from: "fabric_offered_on_2i"
+    select "28", from: "fabric_offered_on_3i"
+    select "2015", from:  "fabric_offered_on_1i"
 
     click_button 'Create Fabric'
 
     expect(current_path).to eq(fabric_path(Fabric.last))
 
     expect(page).to have_text("Red Bricks Cotton")
-    expect(page).to have_text("Time on site: 7 days")
+    expect(page).to have_text("Time on site: 4 days")
   end
 end
 
