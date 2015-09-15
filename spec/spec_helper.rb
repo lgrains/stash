@@ -43,4 +43,13 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
   config.infer_spec_type_from_file_location!
+
+  config.before(:suite) do
+    new_time = Time.local(2015, 9,1,2,0,0)
+    Timecop.travel(new_time)
+  end
+
+  config.after(:suite) do
+    Timecop.return
+  end
 end
