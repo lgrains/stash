@@ -14,12 +14,13 @@ describe "Editing a fabric" do
     expect(find_field("Pattern").value).to eq(fabric.pattern)
 
     fill_in "Color", with: "chartreuse"
-    fill_in "Offered on", with: (Time.now - 15.days).to_s
-
+    select "August", from: "fabric_offered_on_2i"
+    select "30", from: "fabric_offered_on_3i"
+    select "2015", from:  "fabric_offered_on_1i"
     click_button "Update Fabric"
 
     expect(current_path).to eq(fabric_path(fabric))
     expect(page).to have_text("Chartreuse")
-    expect(page).to have_text("Time on site: 15 days")
+    expect(page).to have_text("Time on site: 2 days")
   end
 end
