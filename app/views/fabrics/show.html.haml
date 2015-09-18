@@ -28,4 +28,6 @@
   = link_to("See All fabrics", root_path)
   |
   = link_to("Edit", edit_fabric_path)
+  |
+  = link_to("Delete", fabric_path(@fabric), method: :delete, data: { confirm: 'Are you sure?' })
 
