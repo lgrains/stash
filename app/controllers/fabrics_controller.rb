@@ -27,6 +27,12 @@ class FabricsController < ApplicationController
     redirect_to @fabric
   end
 
+  def destroy
+    @fabric = Fabric.find(params[:id])
+    @fabric.destroy
+    redirect_to fabrics_path
+  end
+
   private
 
   def fabric_params
