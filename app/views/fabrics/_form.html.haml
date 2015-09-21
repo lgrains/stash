@@ -26,11 +26,16 @@
 
   %p
     = f.label :price
-    = f.number_field :price
+    = f.number_field :price, step: 0.01
 
   %p
     = f.label :offered_on
     = f.date_select :offered_on, order: [:month, :day, :year]
+
+  %p
+    = f.label :image_file_name
+    %br
+    = f.text_field :image_file_name
 
   = f.submit
   |

@@ -24,6 +24,9 @@
       %th Time on site:
       %td= time_ago_in_words(@fabric.offered_on)
 
+  %h3
+    Image
+  = image_for(@fabric)
 %nav
   = link_to("See All fabrics", root_path)
   |

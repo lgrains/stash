@@ -5,8 +5,10 @@
 - @fabrics.each do |fabric|
   %article
     %header
-      %h2
-        = link_to(fabric.name, fabric)
+    %h2
+      = link_to(fabric.name, fabric)
+      %br
+      = image_for(fabric)
     %p
       %header
         Description:
