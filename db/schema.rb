@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150904131759) do
+ActiveRecord::Schema.define(version: 20150921191720) do
 
   create_table "fabrics", force: :cascade do |t|
     t.string   "fabric_type"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150904131759) do
     t.boolean  "treated"
     t.string   "treatment_method"
     t.date     "offered_on"
+    t.string   "image_file_name"
   end
 
 end
