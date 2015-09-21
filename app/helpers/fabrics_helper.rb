@@ -8,10 +8,10 @@ module FabricsHelper
   end
 
   def image_for(fabric)
-    if fabric.image_file_name
-      image_tag(fabric.image_file_name, size: "200x200")
-    else
+    if fabric.image_file_name.blank?
       image_tag("placeholder.png")
+    else
+      image_tag(fabric.image_file_name, size: "200x200")
     end
   end
 end
