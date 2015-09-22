@@ -6,10 +6,10 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    %header{ style: "padding: 5px; color: #F0F0F0; background: #99D699;" }
+    %header#page-header
       %h1
         = Stash
-    %aside{ style: "float: right; background: #F0F0F0; width: 200px;" }
+    %aside#sidebar
       %nav
         %ul
           %li
@@ -18,7 +18,7 @@
             = link_to 'Add New Fabric', new_fabric_path
     = yield
 
-    %footer{ style: "text-align: center; padding: 5px; color: #237CBE; background: #F0F0F0" }
-    %p
-      Copyright &copy; 2015
-      = link_to "The Pragmatic Studio","http://pragmaticstudio.com"
+    %footer#page-footer
+      %p
+        Copyright &copy; 2015
+        = link_to "The Pragmatic Studio","http://pragmaticstudio.com"

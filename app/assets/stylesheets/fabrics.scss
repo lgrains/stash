@@ -1,3 +1,10 @@
 // Place all the styles related to the fabrics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+article.fabric {
+  img {
+    float: left;
+    margin: 0 15px;
+    border: 8px solid #F0F0F0;
+  }
+}
