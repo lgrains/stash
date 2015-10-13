@@ -9,3 +9,11 @@ def fabric_attributes(overrides = {})
   offered_on: 3.days.ago
 }.merge(overrides)
 end
+
+def user_attributes(overrides = {})
+  {
+    name: "Barbara",
+    email: "barbara@example.com",
+    password: "p@ssw0rd"
+  }.merge(overrides)
+end
